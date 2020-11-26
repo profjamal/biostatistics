@@ -97,7 +97,9 @@ BIC(model3)
 ## (Note: Lower the better)
 
 # Testing assumptions
-# Linear, mean residual = 0, equal variance of residuals, no auto correlation, residuals not correlated with IVs, n > predictors, no multicollinearity, resdiuals is Normal
+# Linear, mean residual = 0, equal variance of residuals, no auto correlation,
+# residuals not correlated with IVs, n > predictors, no multicollinearity,
+# resdiuals is Normal
 
 mean(model3$residuals) ## Approaching zero
 
@@ -114,3 +116,32 @@ vif(model2) # VIF < 4 = no auto-correlation
 # Or test important assumptions automatically
 library(gvlma)
 gvlma::gvlma(model2)
+
+# Global Stat
+# Are the relationships between your X predictors and Y roughly
+# linear?. Rejection of the null (p < .05) indicates a non-linear relationship
+# between one or more of your X’s and Y 
+
+# Skewness
+# Is your distribution skewed
+# positively or negatively, necessitating a transformation to meet the
+# assumption of normality? Rejection of the null (p < .05) indicates that you
+# should likely transform your data. 
+# 
+# Kurtosis
+# Is your distribution kurtotic
+# (highly peaked or very shallowly peaked), necessitating a transformation to
+# meet the assumption of normality? Rejection of the null (p < .05) indicates
+# that you should likely transform your data. 
+# 
+# Link Function
+# Is your dependent
+# variable truly continuous, or categorical? Rejection of the null (p < .05)
+# indicates that you should use an alternative form of the generalized linear
+# model (e.g. logistic or binomial regression). 
+# 
+# Heteroscedasticity
+# Is the variance of your model residuals constant across the range of X (assumption of
+# homoscedastiity)? Rejection of the null (p < .05) indicates that your
+# residuals are heteroscedastic, and thus non-constant across the range of X.
+# Your model is better/worse at predicting for certain ranges of your X scales.
