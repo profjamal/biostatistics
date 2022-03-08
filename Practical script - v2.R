@@ -3,14 +3,15 @@ setwd("~/iCloud Drive (Archive)/~My Documents/~Academic/Courses Conducted/~Biost
 
 # PART 1 - PREPARING THE DATA
 
-# Part 1.1 - CREATE DATA
+# Part 1.1 - CREATE (HYPOTHETICAL) DATA
 set.seed(1234)
 data <- cbind(1:120, 
               rnorm(120,40,5),
               rbinom(120,1,.4),
               rnorm(120,130,10), 
               rnorm(120,80,10)
-)
+              )
+
 data <- as.data.frame(data)
 
 colnames(data) <- c("ID", "Age", "Sex", "SBP", "DBP")
@@ -24,15 +25,16 @@ data2 <- data.frame(
   Sex=factor(rbinom(120,1,.4)),
   SBP=round(as.numeric(rnorm(120,130,10)), 0),
   DBP=round(as.numeric(rnorm(120,80,10)),0)
-)
+  )
 
 data2$Sex <- factor(data2$Sex, c(0,1), labels = c("Female", "Male") )
 
 # Part 1.2 - EXPORT DATA
 
 # How to export data to text or csv
+
 library(readr)
-write_csv(data2, file = "filename.csv") # Will save into the working directory
+write_csv(data2, file = "exportfilename.csv") # Will save into the working directory
 
 # Part 1.3 - IMPORT (READ) EXTERNAL DATA
 
@@ -49,96 +51,62 @@ training$Smoking2 <- factor(training$Smoking, levels = c(0,1), labels = c("No", 
 
 # PART 2 - CHECKING THE DATA
 
-# Checking distribution for numerical variables
-
-attach(training)
-detach(training)
+# Checking distribution for (selected) numerical variables
 
 ## Visually
-par(mfrow= c(2,4))
+par(mfrow= c(2,3))
 hist(training$Age)
-hist(training$SBP)
-hist(training$DBP)
-hist(training$Weight)
-hist(training$Height)
 hist(training$FBS)
 hist(training$FBS_post)
 
-attach(training)
-
 # Showing Normal curve
-hist(Age, probability = TRUE)
-curve(dnorm(x, mean=mean(Age), sd=sd(Age)), add=TRUE) 
+hist(training$Age, probability = TRUE)
+curve(dnorm(x, mean=mean(training$Age), sd=sd(training$Age)), add=TRUE) 
 
-hist(SBP, probability = TRUE)
-curve(dnorm(x, mean=mean(SBP), sd=sd(SBP)), add=TRUE) 
+hist(training$FBS, probability = TRUE)
+curve(dnorm(x, mean=mean(training$FBS), sd=sd(training$FBS)), add=TRUE) 
 
-hist(DBP, probability = TRUE)
-curve(dnorm(x, mean=mean(DBP), sd=sd(DBP)), add=TRUE) 
-
-hist(Weight, probability = TRUE)
-curve(dnorm(x, mean=mean(Weight), sd=sd(Weight)), add=TRUE) 
-
-hist(Height, probability = TRUE)
-curve(dnorm(x, mean=mean(Height), sd=sd(Height)), add=TRUE) 
-
-hist(FBS, probability = TRUE)
-curve(dnorm(x, mean=mean(FBS), sd=sd(FBS)), add=TRUE) 
-
-hist(FBS_post, probability = TRUE)
-curve(dnorm(x, mean=mean(FBS_post), sd=sd(FBS_post)), add=TRUE) 
+hist(training$FBS_post, probability = TRUE)
+curve(dnorm(x, mean=mean(training$FBS_post), sd=sd(training$FBS_post)), add=TRUE) 
 
 # Q-Q Plot
 
-qqnorm(Age)
-qqline(Age)
+qqnorm(training$Age)
+qqline(training$Age)
 
-qqnorm(SBP)
-qqline(SBP)
+qqnorm(training$FBS)
+qqline(training$FBS)
 
-qqnorm(DBP)
-qqline(DBP)
+qqnorm(training$FBS_post)
+qqline(training$FBS_post)
 
-qqnorm(Weight)
-qqline(Weight)
-
-qqnorm(Height)
-qqline(Height)
-
-qqnorm(FBS)
-qqline(FBS)
-
-qqnorm(FBS_post)
-qqline(FBS_post)
-
-## Showing the moment values - determine
+## Showing the moment values
 library(psych)
-describe(Age)
-describe(SBP)
-describe(DBP)
+describe(training$Age)
+describe(training$FBS)
+describe(training$FBS_post)
 
 # Normality test
-shapiro.test(Age)
-shapiro.test(SBP)
-shapiro.test(DBP)
+shapiro.test(training$Age)
+shapiro.test(training$FBS)
+shapiro.test(training$FBS_post)
 
 #PART 3 - DESCRIPTIVE STATISTICS
 
 # Describe categorical variable (Sex)
-table(Sex)
-round(prop.table(table(Sex))*100, digit=1)
+table(training$Sex)
+prop.table(table(sex))
+prop.table(table(sex))*100
+round(prop.table(table(training$Sex))*100, digit=1)
 
 par(mfrow= c(1,1))
-plot(Sex) # Bar chart for the count
-
-library(ggpubr)
-ggbarplot(training, Sex)
+plot(training$Sex) # Bar chart for the count
 
 # Describe numerical variables (Age, SBP & DBP)
 library(psych)
-describe(Age)
-describe(SBP)
-describe(DBP)
+describe(training$Age)
+describe(training$FBS)
+describe(training$FBS_post)
 
 # Using gtsummary to describe all variables
 library(gtsummary)
@@ -158,13 +126,13 @@ training %>%
 
 # Even a better format
 training %>% 
-  select(Age, Sex, Smoking2, SBP, DBP, Weight, Height, FBS, FBS_post) %>% 
+  select(Age, Sex, Smoking2, FBS, FBS_post) %>% 
   tbl_summary(
-    statistic = list(c(Age, SBP, DBP, Weight, Height) ~ "{mean} ({sd})",
-                     c(FBS, FBS_post) ~ "{median} ({p25}, {p75})",
-                     all_categorical() ~ "{n}/{N} ({p}%)"),
+    statistic = list(c(Age)                     ~ "{mean} ({sd})",
+                     c(Smoking2, FBS, FBS_post) ~ "{median} ({p25}, {p75})",
+                     all_categorical()          ~ "{n}/{N} ({p}%)"),
     digit = all_continuous() ~ 1
-  )
+    )
 
 
 
@@ -173,7 +141,12 @@ training %>%
 # Practice 1 - Sex & Smoking
 
 ## Cross-tabulate Sex with Smoking (Compare proportions)
-table1 <- table(Smoking2, Sex)
+table(training$Sex)
+table(training$Smoking2)
+
+table(training$Smoking2, training$Sex)
+table1 <- table(training$Smoking2, training$Sex)
+
 table1
 
 margin.table(table1, 1) # Row (Smoking) total
@@ -188,7 +161,7 @@ round(prop.table(table1, 1)*100, digit=1)
 round(prop.table(table1, 2)*100, digit=1)
 
 ## Chi-square test
-chisq.test(table1, correct=FALSE) # Do continuity correction if > 20% of cells contain expected count < 5
+chisq.test(table1, correct=F) # Do continuity correction if > 20% of cells contain expected count < 5
 
 ## To obtain the observed & expected count
 chisq.test(table1)$observed
@@ -203,7 +176,7 @@ training %>%
 # Practice 2 -  Sex and BMI Status
 
 ## First, need to create BMI
-training$BMI <- as.numeric(Weight/(Height/100)^2)
+training$BMI <- as.numeric(training$Weight/(training$Height/100)^2)
 
 ## Next, to categorise BMI into BMI status
 training$BMI_status <- factor(cut(training$BMI, 
@@ -212,11 +185,8 @@ training$BMI_status <- factor(cut(training$BMI,
 
 ## Crosstab Sex and BMI Status
 
-detach(training)
-attach(training)
-
-# Crosstab & chi-square using Base
-table2 <- table(Sex, BMI_status)
+# Crosstab & chi-square using Base R
+table2 <- table(training$Sex, training$BMI_status)
 table2
 
 round(prop.table(table2, 1)*100, digits = 1)
@@ -231,21 +201,21 @@ training %>%
 
 
 
-#PART 5 - COMPARE MEANS
+#PART 5 - COMPARE TWO MEANS
 
 # Practice 1 - FBS by Smoking
 
-var.test(FBS ~ Smoking2) # To check the variance assumption
-t.test(FBS ~ Smoking2) # By default, equal variance assumed
-t.test(FBS ~ Smoking2, var.equal = FALSE) # If equal variance can't be assumed
+var.test(training$FBS ~ training$Smoking2) # To check the variance assumption
+t.test(training$FBS ~ training$Smoking2) # By default, equal variance assumed
+t.test(training$FBS ~ training$Smoking2, var.equal = FALSE) # If equal variance can't be assumed
 
 # Alternative method to do t-test using gtsummary with equal variance can't be assummed
 training %>% 
   select(FBS, Smoking2) %>% 
-  tbl_summary(by = Smoking2,
-              statistic = FBS ~ c("{mean} ({sd})")) %>% 
-  add_p(test.args = all_tests("t.test") ~ list(var.equal = TRUE),
-        pvalue_fun = ~style_pvalue(.x, digits = 3)) %>% 
+  tbl_summary(by        = Smoking2,
+              statistic = FBS                 ~ c("{mean} ({sd})")) %>% 
+  add_p(test.args       = all_tests("t.test") ~ list(var.equal = TRUE),
+        pvalue_fun      =                     ~ style_pvalue(.x, digits = 3)) %>% 
   modify_spanning_header(all_stat_cols() ~ "**Smoking**")
 
 # Visualising mean distribution
@@ -285,20 +255,17 @@ interpret_omega_squared(0.000645, rules = "field2013") # Insert the ES value obt
 # Practice 2 - FBS and Blood Pressure status
 
 ## First create BP
-training$BP <- factor(ifelse(SBP>=140 | DBP >=90, "High", "Normal"))
-
-detach(training)
-attach(training)
+training$BP <- factor(ifelse(training$SBP>=140 | training$DBP >=90, "High", "Normal"))
 
 # Compare means FBS by BP
 var.test(training$FBS ~ training$BP) 
 training %>% 
   select(BP, FBS) %>% 
   tbl_summary(
-    by = BP,
-    statistic = FBS ~ "{mean} ({sd})") %>%
-  add_p(test.args = all_tests("t.test") ~ list(var.equal = TRUE),
-        pvalue_fun = ~style_pvalue(.x, digits = 3)) %>% 
+    by             = BP,
+    statistic      = FBS                 ~ "{mean} ({sd})") %>%
+  add_p(test.args  = all_tests("t.test") ~ list(var.equal = TRUE),
+        pvalue_fun =                     ~ style_pvalue(.x, digits = 3)) %>% 
   modify_spanning_header(all_stat_cols() ~ "**Blood Pressure**")
 
 
@@ -334,9 +301,9 @@ TukeyHSD(aov(training$FBS ~ training$BMI_Status))
 # Compare means using gtsummary
 training %>% 
   select(FBS, BMI_Status) %>% 
-  tbl_summary(by = BMI_Status, 
-              statistic = FBS ~ c("{mean} ({sd})"),
-              digits = FBS ~ 1)%>% 
+  tbl_summary(by        = BMI_Status, 
+              statistic = FBS         ~ c("{mean} ({sd})"),
+              digits    = FBS         ~ 1)%>% 
   add_p(FBS ~ "aov", 
         pvalue_fun = ~style_pvalue(.x, digits = 3)) %>% 
   modify_spanning_header(all_stat_cols() ~ "**BMI Status**")
@@ -441,7 +408,8 @@ training2 %>%
   tbl_summary(
     by = Time,
     statistic = all_continuous() ~ c("{mean} ({sd})")) %>% 
-  add_n() %>% d_difference()
+  add_n() %>%
+  add_difference()
 
 
 
