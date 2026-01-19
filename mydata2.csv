@@ -1,0 +1,271 @@
+ID,entry_month,Intervention,FBS,FBS2,FBS3
+1,4,Diet + Exercise,7.9,6.5,6.1
+2,3,Diet + Exercise,7.8,7.5,5.8
+3,6,Diet + Exercise,8.2,6,6.9
+4,1,Diet + Exercise,7.8,6.6,6.9
+5,6,Diet + Exercise,7.8,6,6.4
+6,6,Diet Only,7.8,7.6,7.8
+7,5,Diet Only,7.7,8.1,8.1
+8,1,Diet + Exercise,8.1,6.1,5.3
+9,0,Diet + Exercise,6.5,6.6,6.2
+10,6,Diet + Exercise,7.2,7,6.3
+11,5,Diet + Exercise,8.4,6.1,7.4
+12,6,Diet Only,7.5,6.7,7.6
+13,2,Diet + Exercise,9.5,6.2,6.1
+14,4,Diet + Exercise,7.4,5.9,6.3
+15,4,Diet + Exercise,9.3,6.9,6.7
+16,5,Diet Only,9,8,7.2
+17,5,Diet + Exercise,8.9,6.2,5.9
+18,5,Diet Only,7.7,7.7,6.8
+19,5,Diet Only,8.2,7.1,8.1
+20,2,Diet Only,7.9,8.3,8.2
+21,4,Diet Only,8.2,7.5,7.7
+22,5,Diet Only,8.7,7.1,8.3
+23,1,Diet + Exercise,8.3,7.8,7
+24,3,Diet + Exercise,8.3,6.6,6.4
+25,0,Diet Only,8.2,7.7,7.4
+26,2,Diet + Exercise,8.1,7.5,5.5
+27,1,Diet Only,9,6.9,7
+28,0,Diet + Exercise,8.6,6.4,5.7
+29,6,Diet Only,9.9,8.3,6.8
+30,1,Diet + Exercise,7.1,6.2,5.6
+31,0,Diet Only,8.2,7,8.6
+32,3,Diet + Exercise,8.3,5.6,5.8
+33,5,Diet + Exercise,8.6,6.4,7.1
+34,6,Diet + Exercise,8.5,6.7,6.6
+35,0,Diet + Exercise,8.5,6.1,6.1
+36,1,Diet + Exercise,9.8,7.4,6.5
+37,4,Diet + Exercise,7.1,7,6.4
+38,0,Diet + Exercise,7.6,5.8,5.6
+39,0,Diet + Exercise,8.5,5.9,6
+40,4,Diet + Exercise,8.3,6.5,6.2
+41,6,Diet + Exercise,8.7,6.1,7.2
+42,1,Diet + Exercise,7.9,6.9,6.4
+43,5,Diet + Exercise,7.6,7.2,6.4
+44,4,Diet Only,8.7,8.6,7.1
+45,4,Diet Only,7.7,7.1,7.2
+46,6,Diet Only,8.1,7.8,7.9
+47,6,Diet Only,7.6,7.6,8.2
+48,4,Diet + Exercise,7.5,6,6
+49,2,Diet + Exercise,8.4,5.2,6.8
+50,4,Diet Only,8.5,8.1,6.5
+51,5,Diet + Exercise,8.2,5.3,5.9
+52,6,Diet + Exercise,7.2,6.1,6.4
+53,6,Diet + Exercise,7.4,6.6,5.8
+54,1,Diet + Exercise,8,6.5,6.1
+55,1,Diet Only,8.9,8.7,5.9
+56,6,Diet + Exercise,8.5,6.7,6.9
+57,1,Diet Only,7.5,8.1,7.1
+58,5,Diet + Exercise,8,5.4,6.5
+59,4,Diet Only,8.5,6.9,7.7
+60,1,Diet + Exercise,8.1,6.3,6.5
+61,3,Diet Only,7.6,6.5,7.6
+62,5,Diet + Exercise,9,6.1,5.1
+63,5,Diet Only,8.8,7.5,7.9
+64,1,Diet Only,9.3,9.1,7.6
+65,0,Diet + Exercise,7.6,6.7,6.2
+66,0,Diet Only,7.9,7.6,7.9
+67,2,Diet Only,7.9,7.4,7.5
+68,0,Diet + Exercise,8.3,6.9,7.8
+69,2,Diet + Exercise,8.2,5,7.2
+70,0,Diet + Exercise,8.5,6.7,6.8
+71,0,Diet Only,7.9,7.8,6.5
+72,6,Diet Only,7.6,7.5,7.1
+73,5,Diet Only,8.9,6.5,8.2
+74,5,Diet + Exercise,7.4,7,5
+75,2,Diet + Exercise,8.3,7.7,6.2
+76,5,Diet + Exercise,8.2,6,6.2
+77,5,Diet + Exercise,7.8,7.8,6.6
+78,5,Diet Only,8.4,8.2,7.8
+79,5,Diet Only,8.3,7.5,7.9
+80,2,Diet Only,8.1,6.8,7.8
+81,6,Diet Only,7.8,7.4,7.2
+82,4,Diet + Exercise,9.6,6.7,6.9
+83,3,Diet + Exercise,9.4,6.8,5.6
+84,2,Diet Only,8.2,7.4,7.4
+85,5,Diet Only,8.2,7.6,6.9
+86,2,Diet Only,9.1,7.6,6.7
+87,0,Diet + Exercise,7.9,7.1,6.4
+88,4,Diet Only,8.3,7.2,7.7
+89,1,Diet Only,8.3,7.8,7.8
+90,6,Diet + Exercise,9.8,6.1,5.8
+91,3,Diet + Exercise,8,7.4,6
+92,4,Diet Only,9.2,7.9,6
+93,6,Diet Only,8.1,7,8.2
+94,5,Diet Only,8.1,7,7
+95,0,Diet + Exercise,8.2,6.3,5.8
+96,3,Diet Only,9.8,6.8,7.7
+97,1,Diet Only,7.5,7.6,6.9
+98,6,Diet Only,8,8.2,7.6
+99,1,Diet + Exercise,7.9,6.8,5.6
+100,4,Diet + Exercise,7.2,6,4.7
+101,5,Diet Only,8.8,6.7,7.2
+102,5,Diet + Exercise,8.1,7.4,5.5
+103,0,Diet Only,7.8,8.9,7.7
+104,0,Diet Only,9.2,7.9,7.6
+105,3,Diet + Exercise,8.2,5.9,7.1
+106,5,Diet + Exercise,7.1,7.3,5.7
+107,2,Diet Only,7.5,7.1,8.1
+108,2,Diet + Exercise,7.9,5.7,7.2
+109,6,Diet Only,8.7,7.4,7.5
+110,6,Diet + Exercise,9,6.8,5.9
+111,0,Diet Only,8.7,7.9,7.1
+112,4,Diet + Exercise,7.9,5.9,5.7
+113,2,Diet + Exercise,7.9,6.1,6.1
+114,3,Diet + Exercise,9.4,6.7,6
+115,4,Diet + Exercise,9.2,6.4,6.2
+116,2,Diet + Exercise,7.2,6.2,5.9
+117,5,Diet + Exercise,8.7,6.3,7.1
+118,3,Diet Only,9.1,8.3,8.1
+119,1,Diet Only,8.9,7.1,6.5
+120,0,Diet Only,8.7,6.9,6.7
+121,14,Diet + Exercise,8.5,6.4,NA
+122,17,Diet + Exercise,9.3,6.4,NA
+123,16,Diet + Exercise,7.3,5.2,NA
+124,9,Diet + Exercise,7.7,5.4,5.6
+125,17,Diet + Exercise,8.4,8.9,NA
+126,18,Diet + Exercise,9.5,7.4,NA
+127,13,Diet + Exercise,7.7,5.9,NA
+128,14,Diet + Exercise,9.2,7.5,NA
+129,8,Diet + Exercise,8.8,7.3,6.2
+130,13,Diet + Exercise,7.8,7.5,NA
+131,12,Diet + Exercise,7.9,6.6,7.2
+132,12,Diet + Exercise,7.4,5,5
+133,14,Diet + Exercise,8.6,6.3,NA
+134,12,Diet + Exercise,7.7,5,5
+135,8,Diet + Exercise,7.5,6.1,5
+136,13,Diet + Exercise,8.9,6.4,NA
+137,17,Diet + Exercise,8.6,6.7,NA
+138,7,Diet + Exercise,8.3,5.6,5.8
+139,12,Diet + Exercise,8,6,5.7
+140,8,Diet + Exercise,7.7,7.7,6.1
+141,15,Diet + Exercise,8.5,7.8,NA
+142,15,Diet + Exercise,9.5,8.4,NA
+143,13,Diet + Exercise,8.1,5,NA
+144,17,Diet + Exercise,7.8,7.3,NA
+145,12,Diet + Exercise,8.6,7.3,6.6
+146,14,Diet + Exercise,8.3,6.2,NA
+147,13,Diet + Exercise,7.3,6.2,NA
+148,9,Diet + Exercise,7.4,6.2,6.4
+149,8,Diet + Exercise,8.2,6.5,5.8
+150,17,Diet + Exercise,8.9,7.5,NA
+151,16,Diet + Exercise,8.6,6.7,NA
+152,15,Diet + Exercise,6.8,5,NA
+153,14,Diet + Exercise,7.9,7,NA
+154,7,Diet + Exercise,8.1,6.5,5.4
+155,7,Diet + Exercise,8.9,7.2,7.2
+156,11,Diet + Exercise,8,6.8,6
+157,12,Diet + Exercise,7.1,5.4,5.7
+158,14,Diet + Exercise,7.5,5,NA
+159,13,Diet + Exercise,7.4,5.7,NA
+160,9,Diet + Exercise,6.6,5,5
+161,10,Diet + Exercise,7.4,5,5
+162,14,Diet + Exercise,8.6,7.8,NA
+163,16,Diet + Exercise,8.1,6.6,NA
+164,8,Diet + Exercise,7.3,5.1,5
+165,18,Diet + Exercise,9.7,6.7,NA
+166,11,Diet + Exercise,8.2,6.3,6.3
+167,9,Diet + Exercise,9,7.3,5.1
+168,8,Diet + Exercise,7.8,5.6,5.1
+169,9,Diet + Exercise,7,5,5.1
+170,13,Diet + Exercise,8.5,7.4,NA
+171,15,Diet + Exercise,10,8.9,NA
+172,18,Diet + Exercise,7.9,5,NA
+173,11,Diet + Exercise,8.1,6.3,6
+174,7,Diet + Exercise,7.7,6,5
+175,10,Diet + Exercise,7.7,5.7,6.1
+176,18,Diet + Exercise,8.5,5.8,NA
+177,11,Diet + Exercise,7.3,5.9,5.2
+178,11,Diet + Exercise,8.2,6.4,6.5
+179,13,Diet + Exercise,7.5,5,NA
+180,8,Diet + Exercise,7.1,6.7,5.4
+181,18,Diet + Exercise,7.6,6.3,NA
+182,15,Diet + Exercise,7.9,6.7,NA
+183,7,Diet + Exercise,8.8,9.3,8.3
+184,18,Diet + Exercise,7.4,5.7,NA
+185,13,Diet + Exercise,8,6.4,NA
+186,16,Diet + Exercise,8,8.1,NA
+187,13,Diet + Exercise,8.8,8.2,NA
+188,14,Diet + Exercise,8.5,9.4,NA
+189,7,Diet + Exercise,6.1,5,5
+190,12,Diet + Exercise,7.8,5.3,5.9
+191,13,Diet + Exercise,8.3,7.2,NA
+192,10,Diet + Exercise,8.2,5,5
+193,15,Diet + Exercise,9,7.3,NA
+194,9,Diet + Exercise,7.9,7,6.1
+195,8,Diet + Exercise,8.8,7.1,6.4
+196,13,Diet + Exercise,7.5,6.9,NA
+197,10,Diet + Exercise,8.3,7,5.5
+198,18,Diet + Exercise,8.5,6.4,NA
+199,17,Diet + Exercise,8.1,5.8,NA
+200,8,Diet + Exercise,8.8,7,7.8
+201,7,Diet + Exercise,8,6.6,5.6
+202,18,Diet + Exercise,7.1,6.6,NA
+203,10,Diet + Exercise,7.5,6.9,6.1
+204,11,Diet + Exercise,7.8,7.3,5.4
+205,7,Diet Only,7.8,7.4,6.4
+206,7,Diet Only,7.7,6.6,5.7
+207,13,Diet Only,8.5,7.4,NA
+208,7,Diet Only,8.5,8.8,8.9
+209,10,Diet Only,7.2,5.6,7.7
+210,18,Diet Only,8.5,8.1,NA
+211,16,Diet Only,7.4,7.6,NA
+212,17,Diet Only,8.2,6.9,NA
+213,15,Diet Only,8.2,6.3,NA
+214,14,Diet Only,9.6,7.4,NA
+215,10,Diet Only,7.6,6.7,6.1
+216,7,Diet Only,9,7.9,8
+217,15,Diet Only,8.2,7.1,NA
+218,9,Diet Only,8.8,9.1,9.2
+219,14,Diet Only,8.7,7.5,NA
+220,13,Diet Only,8,8.1,NA
+221,16,Diet Only,8.5,6.9,NA
+222,9,Diet Only,8.4,7.6,8.3
+223,17,Diet Only,7.1,6,NA
+224,17,Diet Only,8.4,7.5,NA
+225,14,Diet Only,7.6,7.6,NA
+226,18,Diet Only,7.6,6,NA
+227,9,Diet Only,7.6,7.3,7.6
+228,8,Diet Only,7.4,6,5.6
+229,8,Diet Only,8.1,6.8,6
+230,10,Diet Only,8.5,7.3,6.7
+231,15,Diet Only,8,6.8,NA
+232,18,Diet Only,8.9,9,NA
+233,7,Diet Only,7.8,6.7,7.3
+234,16,Diet Only,8.2,7,NA
+235,15,Diet Only,8.5,9,NA
+236,14,Diet Only,9.2,8,NA
+237,10,Diet Only,7.4,6.7,8.1
+238,7,Diet Only,8.2,7.7,7.3
+239,18,Diet Only,7,5.4,NA
+240,14,Diet Only,8,8.4,NA
+241,14,Diet Only,9.2,7.5,NA
+242,18,Diet Only,10,8.9,NA
+243,7,Diet Only,9,8.3,7.5
+244,13,Diet Only,8.7,9.7,NA
+245,9,Diet Only,9,9.3,9.3
+246,10,Diet Only,9.3,9.3,8.9
+247,13,Diet Only,8.8,8.6,NA
+248,15,Diet Only,8.1,7.8,NA
+249,18,Diet Only,8.1,7.2,NA
+250,17,Diet Only,8.5,7.8,NA
+251,15,Diet Only,9,8.7,NA
+252,11,Diet Only,9,10.2,8.6
+253,17,Diet Only,8,5.5,NA
+254,11,Diet Only,8.8,9,8.5
+255,14,Diet Only,7.7,5.8,NA
+256,18,Diet Only,7.9,8.1,NA
+257,17,Diet Only,8.6,7.7,NA
+258,7,Diet Only,8.4,7.8,5.5
+259,11,Diet Only,9.1,9.4,6.8
+260,12,Diet Only,7.8,6.2,7.2
+261,17,Diet Only,8,6.6,NA
+262,10,Diet Only,8.6,7.1,7
+263,9,Diet Only,8.5,8.1,7.2
+264,18,Diet Only,9.2,7.6,NA
+265,12,Diet Only,9.2,8,7.8
+266,7,Diet Only,9.4,8.6,8.1
+267,13,Diet Only,8.1,5.9,NA
+268,18,Diet Only,8.9,6.5,NA
+269,8,Diet Only,9.1,7.2,6.1
+270,7,Diet Only,8.6,7.2,6.4
